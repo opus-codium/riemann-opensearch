@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+Process.setproctitle($PROGRAM_NAME)
+
+require "riemann/tools/opensearch"
+
+Riemann::Tools::OpenSearch.run
