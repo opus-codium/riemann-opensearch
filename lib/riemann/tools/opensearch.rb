@@ -5,7 +5,7 @@ require "opensearch-ruby"
 
 module Riemann
   module Tools
-    class OpenSearch
+    class Opensearch
       class JsonMapper
         def initialize(values)
           values.each do |k, v|
