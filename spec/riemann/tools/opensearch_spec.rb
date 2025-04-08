@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Riemann::Tools::OpenSearch::Allocation do
+RSpec.describe Riemann::Tools::Opensearch::Allocation do
   subject do
     described_class.new(JSON.parse(<<~JSON))
       {
@@ -30,7 +30,7 @@ RSpec.describe Riemann::Tools::OpenSearch::Allocation do
   end
 end
 
-RSpec.describe Riemann::Tools::OpenSearch::Health do
+RSpec.describe Riemann::Tools::Opensearch::Health do
   subject do
     described_class.new(JSON.parse(<<~JSON))
       {
