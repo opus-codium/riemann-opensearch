@@ -41,7 +41,6 @@ module Riemann
         attr_accessor :shards, :disk, :host, :ip, :node
 
         def initialize(values)
-          # @disk = Disk.new
           @disk = Struct.new(:indices, :used, :avail, :total, :percent).new
           super
         end
@@ -108,6 +107,11 @@ module Riemann
             state: shard_allocation_state(allocation.shards, max_shards_per_node),
             metric: allocation.shards,
             description: "#{allocation.shards}/#{max_shards_per_node}"
+          })
+
+          report({
+            service: "#{health.cluster} #{allocation.node} indices size",
+            metric: allocation.disk.indices
           })
 
           usage = allocation.disk.used.to_f / allocation.disk.total
