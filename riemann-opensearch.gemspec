@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require_relative "lib/riemann/tools/opensearch/version"
+
 Gem::Specification.new do |spec|
   spec.name = "riemann-opensearch"
-  spec.version = "0.0.1"
+  spec.version = Riemann::Tools::Opensearch::VERSION
   spec.authors = ["Romain Tartière"]
   spec.email = ["romain@blogreen.org"]
 
