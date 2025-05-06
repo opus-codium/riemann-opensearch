@@ -70,9 +70,6 @@ module Riemann
       opt :os_shard_allocation_warning, "Shard allocation warning threshold", short: :none, default: 0.90
       opt :os_shard_allocation_error, "Shard allocation error threshold", short: :none, default: 0.95
 
-      opt :os_disk_usage_warning, "Disk usage warning threshold", short: :none, default: 0.90
-      opt :os_disk_usage_error, "Disk usage error threshold", short: :none, default: 0.95
-
       HEALTH_STATUS_STATE = {
         "green" => :ok,
         "yellow" => :warning,
@@ -113,14 +110,6 @@ module Riemann
             service: "#{health.cluster} #{allocation.node} indices size",
             metric: allocation.disk.indices
           })
-
-          usage = allocation.disk.used.to_f / allocation.disk.total
-          report({
-            service: "#{health.cluster} #{allocation.node} disk usage",
-            state: disk_usage_state(usage),
-            metric: usage,
-            description: format("%.3f %%", usage * 100)
-          })
         end
       end
 
@@ -150,16 +139,6 @@ module Riemann
         Integer(value)
       rescue ArgumentError
         value
-      end
-
-      def disk_usage_state(usage)
-        if usage >= opts[:os_disk_usage_error]
-          :critical
-        elsif usage >= opts[:os_disk_usage_warning]
-          :warning
-        else
-          :ok
-        end
       end
 
       def shard_allocation_state(count, limit)
