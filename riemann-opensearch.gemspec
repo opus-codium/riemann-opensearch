@@ -33,5 +33,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "faraday-net_http_persistent"
   spec.add_dependency "opensearch-ruby", "~> 3.0"
-  spec.add_dependency "riemann-tools", "~> 1.0"
+  spec.add_dependency "riemann-tools", ">= 1.0", "< 3.0"
 end
