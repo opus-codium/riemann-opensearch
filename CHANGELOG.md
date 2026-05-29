@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.1.0](https://github.com/opus-codium/riemann-opensearch/tree/v1.1.0) (2026-05-29)
+
+[Full Changelog](https://github.com/opus-codium/riemann-opensearch/compare/v1.0.0...v1.1.0)
+
+**Implemented enhancements:**
+
+- Allow riemann-tools 2.0.0 [\#6](https://github.com/opus-codium/riemann-opensearch/pull/6) ([smortex](https://github.com/smortex))
+
 ## [v1.0.0](https://github.com/opus-codium/riemann-opensearch/tree/v1.0.0) (2025-05-06)
 
 [Full Changelog](https://github.com/opus-codium/riemann-opensearch/compare/v0.0.1...v1.0.0)
