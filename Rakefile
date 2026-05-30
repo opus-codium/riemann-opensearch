@@ -1,19 +1,23 @@
+# Managed by modulesync - DO NOT EDIT
+# See: https://github.com/opus-codium/modulesync_riemann
+
 # frozen_string_literal: true
+
+require "riemann/tools/opensearch/version"
 
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 
 RSpec::Core::RakeTask.new(:spec)
 
-require "standard/rake"
-
-task default: %i[standard spec]
+task default: :spec
 
 require "github_changelog_generator/task"
 
 GitHubChangelogGenerator::RakeTask.new :changelog do |config|
   config.user = "opus-codium"
   config.project = "riemann-opensearch"
-  config.exclude_labels = ["skip-changelog"]
-  config.future_release = "v#{Riemann::Tools::Opensearch::VERSION}"
+  config.exclude_labels = ["dependencies", "skip-changelog"]
+  config.future_release = Riemann::Tools::Opensearch::VERSION
+  config.since_tag = "v1.0.0"
 end
