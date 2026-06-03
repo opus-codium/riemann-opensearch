@@ -84,8 +84,8 @@ module Riemann
           transport_options: {
             ssl: {
               ca_file: opts[:os_ca_cert],
-              client_cert: opts[:os_cert],
-              client_key: opts[:os_key],
+              client_cert: opts[:os_cert] && OpenSSL::X509::Certificate.new(File.read(opts[:os_cert])),
+              client_key: opts[:os_key] && OpenSSL::PKey.read(File.read(opts[:os_key])),
               verify: !opts[:os_insecure]
             }
           }
