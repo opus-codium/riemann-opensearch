@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.1.1](https://github.com/opus-codium/riemann-opensearch/tree/v1.1.1) (2026-06-03)
+
+[Full Changelog](https://github.com/opus-codium/riemann-opensearch/compare/v1.1.0...v1.1.1)
+
+**Fixed bugs:**
+
+- Fix loading X.509 certificate / key [\#11](https://github.com/opus-codium/riemann-opensearch/pull/11) ([smortex](https://github.com/smortex))
+
 ## [v1.1.0](https://github.com/opus-codium/riemann-opensearch/tree/v1.1.0) (2026-05-29)
 
 [Full Changelog](https://github.com/opus-codium/riemann-opensearch/compare/v1.0.0...v1.1.0)
@@ -7,26 +15,6 @@
 **Implemented enhancements:**
 
 - Allow riemann-tools 2.0.0 [\#6](https://github.com/opus-codium/riemann-opensearch/pull/6) ([smortex](https://github.com/smortex))
-
-## [v1.0.0](https://github.com/opus-codium/riemann-opensearch/tree/v1.0.0) (2025-05-06)
-
-[Full Changelog](https://github.com/opus-codium/riemann-opensearch/compare/v0.0.1...v1.0.0)
-
-**Breaking changes:**
-
-- Remove disk usage metric [\#4](https://github.com/opus-codium/riemann-opensearch/pull/4) ([smortex](https://github.com/smortex))
-
-**Implemented enhancements:**
-
-- Add a metric for the indices size on disk [\#3](https://github.com/opus-codium/riemann-opensearch/pull/3) ([smortex](https://github.com/smortex))
-
-**Fixed bugs:**
-
-- Fix loading with riemann-wrapper [\#2](https://github.com/opus-codium/riemann-opensearch/pull/2) ([smortex](https://github.com/smortex))
-
-## [v0.0.1](https://github.com/opus-codium/riemann-opensearch/tree/v0.0.1) (2025-04-08)
-
-[Full Changelog](https://github.com/opus-codium/riemann-opensearch/compare/5e90741b9e5dd17b64e08ee7907a06a4f8c2f0aa...v0.0.1)
 
 
 
